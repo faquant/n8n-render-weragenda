@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: weragenda-n8n
+    env: docker
+    plan: free
+    repo: https://github.com/faquant/n8n-render-weragenda
+    dockerfilePath: null
+    dockerComposePath: docker-compose.yml
+    autoDeploy: false
