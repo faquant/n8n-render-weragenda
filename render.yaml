@@ -3,14 +3,15 @@ services:
     name: weragenda-n8n
     env: docker
     plan: free
-    image: n8nio/n8n
-    startCommand: n8n start
+    dockerfilePath: Dockerfile
     autoDeploy: false
     envVars:
-      - key: N8N_PORT
-        value: "5678"
       - key: N8N_HOST
         value: 0.0.0.0
+      - key: N8N_PORT
+        value: "5678"
+      - key: WEBHOOK_URL
+        value: https://weragenda-n8n.onrender.com/
       - key: N8N_BASIC_AUTH_ACTIVE
         value: "true"
       - key: N8N_BASIC_AUTH_USER
@@ -19,3 +20,21 @@ services:
         value: weragenda123
       - key: N8N_ENCRYPTION_KEY
         value: weragendaencryption123
+      - key: DB_TYPE
+        value: postgresdb
+      - key: DB_POSTGRESDB_HOST
+        fromService:
+          type: pserv
+          name: weragenda-db
+      - key: DB_POSTGRESDB_PORT
+        value: "5432"
+      - key: DB_POSTGRESDB_DATABASE
+        value: n8n
+      - key: DB_POSTGRESDB_USER
+        value: n8n
+      - key: DB_POSTGRESDB_PASSWORD
+        value: n8n
+
+databases:
+  - name: weragenda-db
+    plan: free
