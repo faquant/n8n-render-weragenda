@@ -1,14 +1,10 @@
-FROM node:18
+FROM n8nio/n8n:1.45.1
 
-# Instala dependências e N8N
-RUN npm install -g n8n
-
-# Configura variáveis de ambiente
 ENV N8N_BASIC_AUTH_ACTIVE=true
 ENV N8N_BASIC_AUTH_USER=admin
 ENV N8N_BASIC_AUTH_PASSWORD=weragenda123
-ENV N8N_HOST=0.0.0.0
 ENV N8N_PORT=5678
+ENV N8N_HOST=0.0.0.0
 
 EXPOSE 5678
 
