@@ -1,3 +1,7 @@
+databases:
+  - name: weragenda-db
+    plan: free
+
 services:
   - type: web
     name: weragenda-n8n
@@ -31,7 +35,3 @@ services:
         value: n8n
       - key: DB_POSTGRESDB_PASSWORD
         value: n8n
-
-databases:
-  - name: weragenda-db
-    plan: free
