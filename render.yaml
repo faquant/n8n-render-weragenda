@@ -1,7 +1,3 @@
-databases:
-  - name: weragenda-db
-    plan: free
-
 services:
   - type: web
     name: weragenda-n8n
@@ -23,15 +19,12 @@ services:
       - key: DB_TYPE
         value: postgresdb
       - key: DB_POSTGRESDB_HOST
-        fromService:
-          type: pserv
-          name: weragenda-db
-          property: host
+        value: dpg-d130uibuibrs73fn6jq0-a
       - key: DB_POSTGRESDB_PORT
         value: "5432"
       - key: DB_POSTGRESDB_DATABASE
-        value: n8n
+        value: n8n_0ywz
       - key: DB_POSTGRESDB_USER
         value: n8n
       - key: DB_POSTGRESDB_PASSWORD
-        value: n8n
+        value: COLE_AQUI_ASSIM_QUE_FICAR_DISPONÍVEL
