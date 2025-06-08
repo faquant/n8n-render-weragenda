@@ -20,7 +20,7 @@ services:
         value: postgresdb
       - key: DB_POSTGRESDB_HOST
         fromService:
-          type: database
+          type: pserv
           name: weragenda-db
           property: host
       - key: DB_POSTGRESDB_PORT
