@@ -1,5 +1,9 @@
-FROM docker.n8n.io/n8n
+FROM node:18
 
+# Instala dependências e N8N
+RUN npm install -g n8n
+
+# Configura variáveis de ambiente
 ENV N8N_BASIC_AUTH_ACTIVE=true
 ENV N8N_BASIC_AUTH_USER=admin
 ENV N8N_BASIC_AUTH_PASSWORD=weragenda123
