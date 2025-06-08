@@ -1,6 +1,0 @@
-{
-  "build": {
-    "dockerfilePath": null,
-    "dockerComposePath": "docker-compose.yml"
-  }
-}
