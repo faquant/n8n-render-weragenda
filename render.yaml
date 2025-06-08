@@ -28,3 +28,5 @@ services:
         value: n8n
       - key: DB_POSTGRESDB_PASSWORD
         value: gtRmblovTuoVqCDFfSd2pYK8u26R5MX5
+      - key: N8N_RUNNERS_ENABLED
+        value: "true"
